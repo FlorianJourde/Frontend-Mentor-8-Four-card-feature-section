@@ -8,8 +8,7 @@
   --clr-very-light-gray: hsl(0, 0%, 98%);
   --clr-white: hsl(0, 0%, 100%);
   --fs-h1: 1.5em;
-  --fs-h2: 1.5em;
-  --fs-h3: 1.2em;
+  --fs-h2: 1.2em;
   --fs-card: 0.8em;
   --ff-primary: Poppins, sans-serif;
   --br-primary: 8px;
@@ -27,21 +26,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 1rem;
+  padding: 1rem;
   color: var(--clr-very-dark-blue);
 }
 
 h1 {
   font-size: var(--fs-h1);
+  font-weight: 200;
+}
+
+.title {
+  font-weight: 600;
 }
 
 h2 {
   font-size: var(--fs-h2);
-  font-weight: 200;
-}
-
-h3 {
-  font-size: var(--fs-h3);
 }
 
 p {
@@ -63,7 +62,7 @@ li {
   padding-bottom: 4rem;
 }
 
-.header h1 {
+.header .title {
   padding-bottom: 1rem;
 }
 
@@ -79,6 +78,12 @@ li {
   justify-content: space-between;
   height: 220px;
   box-shadow: 0 10px 20px hsla(215, 31%, 69%, 0.4);
+}
+
+.accent-border {
+  width: auto;
+  height: 3px;
+  border: none;
 }
 
 .card-content {
@@ -105,12 +110,6 @@ li {
   grid-area: fourth-card;
 }
 
-.accent-border {
-  width: auto;
-  height: 3px;
-  border: none;
-}
-
 #supervisor {
   background-color: var(--clr-cyan);
 }
@@ -134,7 +133,7 @@ li {
   margin-left: auto;
 }
 
-.card h3 {
+.card h2 {
   padding-bottom: 0.2rem;
 }
 
@@ -151,8 +150,11 @@ li {
 @media (min-width: 1100px) {
   :root {
     --fs-h1: 2.3em;
-    --fs-h2: 2.3em;
-    padding: 3rem 1rem;
+  }
+
+  body {
+    height: 100vh;
+    margin: auto;
   }
 
   .wrapper {
@@ -172,14 +174,13 @@ li {
     height: 250px;
   }
 
-  .card h3 {
-    padding-bottom: 0.4rem;
+  .card h2 {
+    padding-bottom: 0.6rem;
   }
 
   .card + .card {
     margin-top: 0;
   }
-
 
   .accent-border {
     height: 5px;
